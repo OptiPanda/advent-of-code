@@ -1,5 +1,7 @@
 package com.adventofcode;
 
+import com.adventofcode.days.Day1;
+
 public class AdventOfCodeStartup {
 
     public static void main(String[] args) {
