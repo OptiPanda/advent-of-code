@@ -7,15 +7,15 @@ public class Day1Test {
     public static void main(String[] args) {
         System.out.println(CLASSNAME + " : Start tests");
         System.out.println("---");
-        boolean isOk = true;
-        isOk &= testAnswer1();
-        isOk &= testAnswer2();
+
+        boolean isOk = testAnswer1() & testAnswer2();
+
         System.out.println("---");
 
         System.out.println(CLASSNAME + " : All test " + (isOk ? "OK" : "KO"));
     }
 
-    static boolean testAnswer1() {
+    private static boolean testAnswer1() {
         final Integer answer = Day1.answer1();
         if (answer != 69501) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected 69501");
@@ -25,7 +25,7 @@ public class Day1Test {
         return true;
     }
 
-    static boolean testAnswer2() {
+    private static boolean testAnswer2() {
         final Integer answer = Day1.answer2();
         if (answer != 202346) {
             System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected 202346");
