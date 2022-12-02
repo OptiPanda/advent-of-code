@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class Day1 {
 
-    private static final String FILE_PATH = "C:\\Users\\AJ0BAB2L\\workspace\\adventofcode\\src\\main\\resources\\input-day1";
+    private static final String FILE_PATH = "src/main/resources/input-day1";
 
-    private static Integer answers(int limit) {
+    private static Integer sumOf(int limit) {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
@@ -25,8 +25,7 @@ public class Day1 {
             sum += nInt;
 
             if (sc.hasNext(";")) {
-                results.put(idx, sum);
-                idx++;
+                results.put(idx++, sum);
                 sum = 0;
                 sc.next();
             }
@@ -37,14 +36,14 @@ public class Day1 {
                 .limit(limit)
                 .map(Map.Entry::getValue)
                 .reduce(Integer::sum)
-                .orElse(0);
+                .orElseThrow(() -> new RuntimeException("No sum"));
     }
 
     public static Integer answer1() {
-        return answers(1);
+        return sumOf(1);
     }
 
     public static Integer answer2() {
-        return answers(3);
+        return sumOf(3);
     }
 }
