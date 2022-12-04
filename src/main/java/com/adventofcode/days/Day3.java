@@ -17,27 +17,19 @@ public class Day3 {
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
 
-            String firstCompartment = line.substring(0, line.length()/2);
-            String secondCompartment = line.substring(line.length()/2);
+            String firstCompartment = line.substring(0, line.length() / 2);
+            String secondCompartment = line.substring(line.length() / 2);
 
-            String lineChar = "";
+            char lineChar = 0;
 
-            for (String c : firstCompartment.split("")) {
-                if (secondCompartment.contains(c)) {
+            for (char c : firstCompartment.toCharArray()) {
+                if (secondCompartment.contains(c + "")) {
                     lineChar = c;
                     break;
                 }
             }
 
-            int val = 0;
-
-            if (Character.isUpperCase(lineChar.charAt(0))) {
-                val = lineChar.charAt(0) - 64;
-            } else {
-                val = lineChar.charAt(0) - 70;
-            }
-
-            score += val;
+            score += calcCharScore(lineChar);
         }
 
         return score;
@@ -47,8 +39,38 @@ public class Day3 {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
-        int score = 1;
+        int score = 0;
+
+        while (sc.hasNextLine()) {
+
+            String firstLine = sc.nextLine();
+            String secondLine = sc.nextLine();
+            String thirdLine = sc.nextLine();
+
+            char groupChar = 0;
+
+            for (char c : firstLine.toCharArray()) {
+                if (secondLine.contains(c + "") && thirdLine.contains(c + "")) {
+                    groupChar = c;
+                    break;
+                }
+            }
+
+            score += calcCharScore(groupChar);
+        }
 
         return score;
+    }
+
+    protected static int calcCharScore(char lineChar) {
+        int val = 0;
+
+        if (Character.isUpperCase(lineChar)) {
+            val = lineChar - 38;
+        } else {
+            val = lineChar - 96;
+        }
+
+        return val;
     }
 }
