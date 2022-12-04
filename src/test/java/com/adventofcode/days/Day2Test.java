@@ -17,8 +17,9 @@ public class Day2Test {
 
     private static boolean testAnswer1() {
         final Integer answer = Day2.answer1();
+        int expectedAnswer = 15337;
         if (answer != 15337) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected 15337");
+            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
         System.out.println(CLASSNAME + " answer 1 OK");
@@ -27,8 +28,9 @@ public class Day2Test {
 
     private static boolean testAnswer2() {
         final Integer answer = Day2.answer2();
+        int expectedAnswer = 11696;
         if (answer != 11696) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected 11696");
+            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
         System.out.println(CLASSNAME + " answer 2 OK");
