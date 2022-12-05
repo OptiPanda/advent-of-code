@@ -8,7 +8,7 @@ public class Day05Test {
         System.out.println(CLASSNAME + " : Start tests");
         System.out.println("---");
 
-        boolean isOk = testAnswer1() & testAnswer2();
+        boolean isOk = testGetOrder() & testAnswer1() & testAnswer2();
 
         System.out.println("---");
 
@@ -16,9 +16,9 @@ public class Day05Test {
     }
 
     private static boolean testAnswer1() {
-        final Integer answer = Day05.answer1();
-        int expectedAnswer = 0;
-        if (answer != expectedAnswer) {
+        final String answer = Day05.answer1();
+        String expectedAnswer = "TWSGQHNHL";
+        if (!answer.equals(expectedAnswer)) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
@@ -34,6 +34,24 @@ public class Day05Test {
             return false;
         }
         System.out.println(CLASSNAME + " answer 2 OK");
+        return true;
+    }
+
+    private static boolean testGetOrder() {
+        final Order answer = Day05.getOrder("move 4 from 5 to 6");
+        if (answer.move != 4) {
+            System.err.println(CLASSNAME + " testGetOrder KO | given 4 expected 4 got" + answer.move);
+            return false;
+        }
+        if (answer.from != 5) {
+            System.err.println(CLASSNAME + " testGetOrder KO | given 5 expected 5 got" + answer.from);
+            return false;
+        }
+        if (answer.to != 6) {
+            System.err.println(CLASSNAME + " testGetOrder KO | given 6 expected 6 got" + answer.to);
+            return false;
+        }
+        System.out.println(CLASSNAME + " testGetOrder OK");
         return true;
     }
 }
