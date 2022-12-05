@@ -1,8 +1,8 @@
 package com.adventofcode.days;
 
-public class Day5Test {
+public class Day05Test {
 
-    public static final String CLASSNAME = Day5Test.class.getSimpleName();
+    public static final String CLASSNAME = Day05Test.class.getSimpleName();
 
     public static void main(String[] args) {
         System.out.println(CLASSNAME + " : Start tests");
@@ -16,7 +16,7 @@ public class Day5Test {
     }
 
     private static boolean testAnswer1() {
-        final Integer answer = Day5.answer1();
+        final Integer answer = Day05.answer1();
         int expectedAnswer = 0;
         if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
@@ -27,7 +27,7 @@ public class Day5Test {
     }
 
     private static boolean testAnswer2() {
-        final Integer answer = Day5.answer2();
+        final Integer answer = Day05.answer2();
         int expectedAnswer = 0;
         if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);

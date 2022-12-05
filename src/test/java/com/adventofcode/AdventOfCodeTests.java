@@ -6,19 +6,19 @@ class AdventOfCodeTests {
 
     public static void main(String[] args) {
         System.out.println("================");
-        Day1Test.main(args);
+        Day01Test.main(args);
 
         System.out.println("\n================");
-        Day2Test.main(args);
+        Day02Test.main(args);
 
         System.out.println("\n================");
-        Day3Test.main(args);
+        Day03Test.main(args);
 
         System.out.println("\n================");
-        Day4Test.main(args);
+        Day04Test.main(args);
 
         System.out.println("\n================");
-        Day5Test.main(args);
+        Day05Test.main(args);
     }
 
 }

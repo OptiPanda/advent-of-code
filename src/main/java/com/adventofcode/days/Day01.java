@@ -2,14 +2,15 @@ package com.adventofcode.days;
 
 import com.adventofcode.utils.AdventOfCodeUtils;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Day1 {
+public class Day01 {
 
-    private static final String FILE_PATH = "src/main/resources/input-day1";
+    private static final String FILE_PATH = "src/main/resources/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static Integer sumOf(int limit) {
 

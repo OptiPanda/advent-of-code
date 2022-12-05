@@ -2,11 +2,12 @@ package com.adventofcode.days;
 
 import com.adventofcode.utils.AdventOfCodeUtils;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Scanner;
 
-public class Day2 {
+public class Day02 {
 
-    private static final String FILE_PATH = "src/main/resources/input-day2";
+    private static final String FILE_PATH = "src/main/resources/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static final String ROCK = "A";
     private static final String PAPER = "B";
