@@ -27,9 +27,9 @@ public class Day05Test {
     }
 
     private static boolean testAnswer2() {
-        final Integer answer = Day05.answer2();
-        int expectedAnswer = 0;
-        if (answer != expectedAnswer) {
+        final String answer = Day05.answer2();
+        String expectedAnswer = "JNRSCDWPP";
+        if (!answer.equals(expectedAnswer)) {
             System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
