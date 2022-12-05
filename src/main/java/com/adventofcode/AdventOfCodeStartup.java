@@ -3,6 +3,7 @@ package com.adventofcode;
 import com.adventofcode.days.Day1;
 import com.adventofcode.days.Day2;
 import com.adventofcode.days.Day3;
+import com.adventofcode.days.Day4;
 
 public class AdventOfCodeStartup {
 
@@ -19,5 +20,9 @@ public class AdventOfCodeStartup {
         // Day 3
         System.out.println("Day 3 - 1 : " + Day3.answer1());
         System.out.println("Day 3 - 2 : " + Day3.answer2());
+
+        // Day 4
+        System.out.println("Day 4 - 1 : " + Day4.answer1());
+        System.out.println("Day 4 - 2 : " + Day4.answer2());
     }
 }
