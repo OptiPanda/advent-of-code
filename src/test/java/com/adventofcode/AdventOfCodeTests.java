@@ -1,9 +1,6 @@
 package com.adventofcode;
 
-import com.adventofcode.days.Day1Test;
-import com.adventofcode.days.Day2Test;
-import com.adventofcode.days.Day3Test;
-import com.adventofcode.days.Day4Test;
+import com.adventofcode.days.*;
 
 class AdventOfCodeTests {
 
@@ -19,6 +16,9 @@ class AdventOfCodeTests {
 
         System.out.println("\n================");
         Day4Test.main(args);
+
+        System.out.println("\n================");
+        Day5Test.main(args);
     }
 
 }

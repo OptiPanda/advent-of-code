@@ -1,9 +1,6 @@
 package com.adventofcode;
 
-import com.adventofcode.days.Day1;
-import com.adventofcode.days.Day2;
-import com.adventofcode.days.Day3;
-import com.adventofcode.days.Day4;
+import com.adventofcode.days.*;
 
 public class AdventOfCodeStartup {
 
@@ -24,5 +21,9 @@ public class AdventOfCodeStartup {
         // Day 4
         System.out.println("Day 4 - 1 : " + Day4.answer1());
         System.out.println("Day 4 - 2 : " + Day4.answer2());
+
+        // Day 4
+        System.out.println("Day 5 - 1 : " + Day5.answer1());
+        System.out.println("Day 5 - 2 : " + Day5.answer2());
     }
 }
