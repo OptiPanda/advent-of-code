@@ -1,4 +1,4 @@
-package com.adventofcode.days;
+package com.adventofcode.year2022.days;
 
 public class Day06Test {
 

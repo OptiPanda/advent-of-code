@@ -1,4 +1,4 @@
-package com.adventofcode.days;
+package com.adventofcode.year2022.days;
 
 import com.adventofcode.utils.AdventOfCodeUtils;
 
@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class Day06 {
 
-    private static final String FILE_PATH = "src/main/resources/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
+    private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static Integer answer(int messageSize, String[] strings) {
 

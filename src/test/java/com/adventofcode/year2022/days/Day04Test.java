@@ -1,8 +1,8 @@
-package com.adventofcode.days;
+package com.adventofcode.year2022.days;
 
-public class Day01Test {
+public class Day04Test {
 
-    public static final String CLASSNAME = Day01Test.class.getSimpleName();
+    public static final String CLASSNAME = Day04Test.class.getSimpleName();
 
     public static void main(String[] args) {
         System.out.println(CLASSNAME + " : Start tests");
@@ -16,9 +16,9 @@ public class Day01Test {
     }
 
     private static boolean testAnswer1() {
-        final Integer answer = Day01.answer1();
-        int expectedAnswer = 69501;
-        if (answer != 69501) {
+        final Integer answer = Day04.answer1();
+        int expectedAnswer = 532;
+        if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
@@ -27,14 +27,13 @@ public class Day01Test {
     }
 
     private static boolean testAnswer2() {
-        final Integer answer = Day01.answer2();
-        int expectedAnswer = 202346;
-        if (answer != 202346) {
+        final Integer answer = Day04.answer2();
+        int expectedAnswer = 854;
+        if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
             return false;
         }
         System.out.println(CLASSNAME + " answer 2 OK");
         return true;
     }
-
 }

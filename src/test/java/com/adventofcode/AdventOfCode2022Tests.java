@@ -1,8 +1,8 @@
 package com.adventofcode;
 
-import com.adventofcode.days.*;
+import com.adventofcode.year2022.days.*;
 
-class AdventOfCodeTests {
+class AdventOfCode2022Tests {
 
     public static void main(String[] args) {
         System.out.println("================");
