@@ -10,6 +10,9 @@ class AdventOfCode2021Tests {
 
         System.out.println("================");
         Day02Test.main(args);
+
+        System.out.println("================");
+        Day03Test.main(args);
     }
 
 }
