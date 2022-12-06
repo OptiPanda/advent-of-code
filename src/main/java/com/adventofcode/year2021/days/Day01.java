@@ -21,7 +21,6 @@ public class Day01 {
             final int current = sc.nextInt();
 
             if (previous != null && previous < current) {
-                System.err.println(previous + " < " + current);
                 count++;
             }
 
@@ -34,19 +33,31 @@ public class Day01 {
     public static Integer answer2() {
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
+        Integer p1 = null;
+        Integer p2 = null;
+        Integer p3 = null;
+
         Integer previous = null;
 
         int count = 0;
 
         while (sc.hasNextInt()) {
-            final int current = sc.nextInt();
 
-            if (previous != null && previous < current) {
-                System.err.println(previous + " < " + current);
+            p1 = p2;
+            p2 = p3;
+            p3 = sc.nextInt();
+
+            if (p1 == null) {
+                continue;
+            }
+
+            int sum = p1 + p2 + p3;
+
+            if (previous != null && previous < sum) {
                 count++;
             }
 
-            previous = current;
+            previous = sum;
         }
 
         return count;
