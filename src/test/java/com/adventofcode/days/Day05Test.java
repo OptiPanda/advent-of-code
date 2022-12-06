@@ -38,7 +38,7 @@ public class Day05Test {
     }
 
     private static boolean testGetOrder() {
-        final Order answer = Day05.getOrder("move 4 from 5 to 6");
+        final Day05.Order answer = Day05.getOrder("move 4 from 5 to 6");
         if (answer.move != 4) {
             System.err.println(CLASSNAME + " testGetOrder KO | given 4 expected 4 got" + answer.move);
             return false;

@@ -99,16 +99,18 @@ public class Day05 {
 
         return new Order(Integer.parseInt(ordSplit[0]),Integer.parseInt(ordSplit[1]),Integer.parseInt(ordSplit[2]));
     }
-}
 
-class Order {
-    Integer move;
-    Integer from;
-    Integer to;
+    protected static class Order {
+        Integer move;
+        Integer from;
+        Integer to;
 
-    public Order(Integer move, Integer from, Integer to) {
-        this.move = move;
-        this.from = from;
-        this.to = to;
+        public Order(Integer move, Integer from, Integer to) {
+            this.move = move;
+            this.from = from;
+            this.to = to;
+        }
     }
 }
+
+
