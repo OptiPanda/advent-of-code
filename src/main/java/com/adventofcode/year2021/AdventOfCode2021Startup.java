@@ -9,5 +9,9 @@ public class AdventOfCode2021Startup {
         // Day 1
         System.out.println("Day 1 - 1 : " + Day01.answer1());
         System.out.println("Day 1 - 2 : " + Day01.answer2());
+
+        // Day 2
+        System.out.println("Day 2 - 1 : " + Day02.answer1());
+        System.out.println("Day 2 - 2 : " + Day02.answer2());
     }
 }
