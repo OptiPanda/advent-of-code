@@ -22,8 +22,12 @@ public class AdventOfCodeStartup {
         System.out.println("Day 4 - 1 : " + Day04.answer1());
         System.out.println("Day 4 - 2 : " + Day04.answer2());
 
-        // Day 4
+        // Day 5
         System.out.println("Day 5 - 1 : " + Day05.answer1());
         System.out.println("Day 5 - 2 : " + Day05.answer2());
+
+        // Day 6
+        System.out.println("Day 6 - 1 : " + Day06.answer1());
+        System.out.println("Day 6 - 2 : " + Day06.answer2());
     }
 }

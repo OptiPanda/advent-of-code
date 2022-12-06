@@ -19,6 +19,9 @@ class AdventOfCodeTests {
 
         System.out.println("\n================");
         Day05Test.main(args);
+
+        System.out.println("\n================");
+        Day06Test.main(args);
     }
 
 }
