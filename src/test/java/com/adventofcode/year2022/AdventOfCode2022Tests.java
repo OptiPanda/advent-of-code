@@ -1,27 +1,28 @@
-package com.adventofcode;
+package com.adventofcode.year2022;
 
 import com.adventofcode.year2022.days.*;
 
-class AdventOfCode2022Tests {
+public class AdventOfCode2022Tests {
 
     public static void main(String[] args) {
+
         System.out.println("================");
-        Day01Test.main(args);
+        Day01Test.test();
 
         System.out.println("\n================");
-        Day02Test.main(args);
+        Day02Test.test();
 
         System.out.println("\n================");
-        Day03Test.main(args);
+        Day03Test.test();
 
         System.out.println("\n================");
-        Day04Test.main(args);
+        Day04Test.test();
 
         System.out.println("\n================");
-        Day05Test.main(args);
+        Day05Test.test();
 
         System.out.println("\n================");
-        Day06Test.main(args);
+        Day06Test.test();
     }
 
 }

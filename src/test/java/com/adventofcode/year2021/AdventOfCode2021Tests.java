@@ -2,17 +2,17 @@ package com.adventofcode.year2021;
 
 import com.adventofcode.year2021.days.*;
 
-class AdventOfCode2021Tests {
+public class AdventOfCode2021Tests {
 
     public static void main(String[] args) {
         System.out.println("================");
-        Day01Test.main(args);
+        Day01Test.test();
 
         System.out.println("================");
-        Day02Test.main(args);
+        Day02Test.test();
 
         System.out.println("================");
-        Day03Test.main(args);
+        Day03Test.test();
     }
 
 }

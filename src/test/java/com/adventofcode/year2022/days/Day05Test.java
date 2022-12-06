@@ -1,10 +1,12 @@
 package com.adventofcode.year2022.days;
 
-public class Day05Test {
+import com.adventofcode.DayTest;
+
+public class Day05Test extends DayTest {
 
     public static final String CLASSNAME = Day05Test.class.getSimpleName();
 
-    public static void main(String[] args) {
+    public static void test() {
         System.out.println(CLASSNAME + " : Start tests");
         System.out.println("---");
 
