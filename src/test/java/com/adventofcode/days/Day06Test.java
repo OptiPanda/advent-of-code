@@ -17,7 +17,7 @@ public class Day06Test {
 
     private static boolean testAnswer1() {
         final Integer answer = Day06.answer1();
-        int expectedAnswer = 0;
+        int expectedAnswer = 1702;
         if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
             return false;

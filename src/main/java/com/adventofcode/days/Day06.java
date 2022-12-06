@@ -3,7 +3,8 @@ package com.adventofcode.days;
 import com.adventofcode.utils.AdventOfCodeUtils;
 
 import java.lang.invoke.MethodHandles;
-import java.util.Scanner;
+import java.util.*;
+import java.util.regex.Pattern;
 
 public class Day06 {
 
@@ -13,9 +14,21 @@ public class Day06 {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
-        int score = 0;
+        final String[] strings = sc.nextLine().split("");
 
-        return score;
+        for (int i = 3; i < strings.length; i++) {
+            Set<String> set =  new HashSet<>();
+            set.add(strings[i - 3]);
+            set.add(strings[i - 2]);
+            set.add(strings[i - 1]);
+            set.add(strings[i]);
+
+            if (set.size() == 4) {
+                return i+1;
+            }
+        }
+
+        return 0;
     }
 
     public static Integer answer2() {
