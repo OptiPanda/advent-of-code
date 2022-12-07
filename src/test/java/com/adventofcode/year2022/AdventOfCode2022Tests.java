@@ -23,6 +23,9 @@ public class AdventOfCode2022Tests {
 
         System.out.println("\n================");
         Day06Test.test();
+
+        System.out.println("\n================");
+        Day07Test.test();
     }
 
 }
