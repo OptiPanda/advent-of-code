@@ -31,7 +31,11 @@ public class AdventOfCode2022Startup {
         System.out.println("2022 Day 6 - 2 : " + Day06.answer2());
 
         // Day 7
-        System.out.println("2022 Day 7 - 1 : " + Day06.answer1());
-        System.out.println("2022 Day 7 - 2 : " + Day06.answer2());
+        System.out.println("2022 Day 7 - 1 : " + Day07.answer1());
+        System.out.println("2022 Day 7 - 2 : " + Day07.answer2());
+
+        // Day 8
+        System.out.println("2022 Day 8 - 1 : " + Day08.answer1());
+        System.out.println("2022 Day 8 - 2 : " + Day08.answer2());
     }
 }
