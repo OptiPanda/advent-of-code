@@ -11,16 +11,7 @@ public class Day08 {
 
     public static Integer answer1() {
 
-        final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
-        
-        Integer[][] map = new Integer[99][99];
-
-        for (int i = 0; i < 99; i++) {
-            final String[] split = sc.nextLine().split("");
-            for (int j = 0; j < split.length; j++) {
-                map[i][j] = Integer.parseInt(split[j]);
-            }
-        }
+        Integer[][] map = generateMap(AdventOfCodeUtils.getScanner(FILE_PATH));
 
         int visible = 0;
 
@@ -71,21 +62,107 @@ public class Day08 {
                     }
                 }
 
-                if(isVisibleLeft || isVisibleRight || isVisibleTop || isVisibleBottom) {
+                if (isVisibleLeft || isVisibleRight || isVisibleTop || isVisibleBottom) {
                     visible++;
                 }
-
             }
         }
 
         return visible;
     }
 
+    private static Integer[][] generateMap(Scanner sc) {
+        Integer[][] map = new Integer[99][99];
+
+        for (int i = 0; i < 99; i++) {
+            final String[] split = sc.nextLine().split("");
+            for (int j = 0; j < split.length; j++) {
+                map[i][j] = Integer.parseInt(split[j]);
+            }
+        }
+        return map;
+    }
+
     public static Integer answer2() {
 
-        final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Integer[][] map = generateMap(AdventOfCodeUtils.getScanner(FILE_PATH));
 
-        return 0;
+        int max = 0;
+
+        for (int line = 0; line < map.length; line++) { // line
+
+            for (int col = 0; col < map[line].length; col++) { // column
+
+                int left = getLeft(map, line, col);
+                int right = getRight(map, line, col);
+                int top = getTop(map, line, col);
+                int bottom = getBottom(map, line, col);
+
+                int treeView = top * right * bottom * left;
+
+//                System.err.print(treeView);
+                if (treeView > max) {
+//                    System.err.println(treeView + " new max [" + (line+1) + "," + (col+1) + "] w/ t:"+top+" r:"+right+" b:"+bottom+" l:"+left);
+                    max = treeView;
+                }
+//                System.err.println();
+
+            }
+        }
+
+        return max;
+    }
+
+    protected static int getBottom(Integer[][] map, int line, int col) {
+        int currentTreeHeight = map[line][col];
+
+        int cursor = line + 1;
+
+        int bottom = 1;
+
+        while (cursor < map.length - 1 && map[cursor++][col] < currentTreeHeight) {
+            bottom++;
+        }
+        return bottom;
+    }
+
+    protected static int getTop(Integer[][] map, int line, int col) {
+        int currentTreeHeight = map[line][col];
+
+        int cursor = line - 1;
+
+        int top = 1;
+
+        while (cursor > 0 && map[cursor--][col] < currentTreeHeight) {
+            top++;
+        }
+        return top;
+    }
+
+    protected static int getRight(Integer[][] map, int line, int col) {
+        int currentTreeHeight = map[line][col];
+
+        int cursor = col + 1;
+
+        int right = 1;
+
+        while (cursor < map[line].length -1 && map[line][cursor++] < currentTreeHeight) {
+            right++;
+        }
+        return right;
+    }
+
+    protected static int getLeft(Integer[][] map, int line, int col) {
+        int currentTreeHeight = map[line][col];
+
+        int cursor = col - 1;
+
+        int left = 1;
+
+        while (cursor > 0 && map[line][cursor--] < currentTreeHeight) {
+            left++;
+        }
+        return left;
     }
 }
 
