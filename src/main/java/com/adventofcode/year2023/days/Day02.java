@@ -60,6 +60,37 @@ public class Day02 {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
-        return 0;
+        int sumOfPower = 0;
+
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+
+            final String[] game = line.split(": ");
+
+            final String[] sets = game[1].split("; ");
+
+            int minRed = 0;
+            int minGreen = 0;
+            int minBlue = 0;
+
+            for (String set : sets) {
+
+                final String[] rolls = set.split(", ");
+                for (String roll : rolls) {
+                    final String[] values = roll.split(" ");
+
+                    int qte = Integer.parseInt(values[0]);
+                    switch (values[1]) {
+                        case "red" -> minRed = Math.max(qte, minRed);
+                        case "blue" -> minBlue = Math.max(qte, minBlue);
+                        case "green" -> minGreen = Math.max(qte, minGreen);
+                    }
+                }
+            }
+
+            sumOfPower += (minRed * minGreen * minBlue);
+        }
+
+        return sumOfPower;
     }
 }
