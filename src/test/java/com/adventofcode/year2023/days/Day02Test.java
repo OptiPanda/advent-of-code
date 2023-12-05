@@ -19,7 +19,7 @@ public class Day02Test extends DayTest {
 
     private static boolean testAnswer1() {
         final Integer answer = Day02.answer1();
-        int expectedAnswer = 0;
+        int expectedAnswer = 2771;
         if (answer != expectedAnswer) {
             System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
             return false;
