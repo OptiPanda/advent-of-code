@@ -52,7 +52,7 @@ public class Day03 {
         while (sc.hasNextLine()) {
             String[] line = sc.nextLine().split("");
 
-            Integer[] iLine = Arrays.stream(line).map(Integer::parseInt).toList().toArray(new Integer[0]);
+            Integer[] iLine = Arrays.stream(line).map(Integer::parseInt).collect(Collectors.toList()).toArray(new Integer[0]);
 
             datas.put(idx++, iLine);
         }
