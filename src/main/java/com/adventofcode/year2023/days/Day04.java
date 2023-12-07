@@ -48,20 +48,17 @@ public class Day04 {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
-        int points = 0;
-
         List<String> cards = new ArrayList<>();
 
         while (sc.hasNextLine()) {
             cards.add(sc.nextLine().split(": ")[1]);
         }
 
-        List<String> wonCards = new ArrayList<>();
-        wonCards.add(cards.get(0));
+        int[] factors = new int[cards.size()];
 
-        while (!wonCards.isEmpty()) {
-            final String card = wonCards.get(0);
-            wonCards.remove(0);
+        for (int i = 0; i < cards.size(); i++) {
+            factors[i]++;
+            final String card = cards.get(i);
 
             int cardPoints = 0;
 
@@ -77,10 +74,16 @@ public class Day04 {
             }
 
             if (cardPoints > 0) {
-                wonCards.add(cards.get((int) Math.pow(2, cardPoints-1)-1));
+                int result = (int) Math.pow(2, cardPoints-1) - 1;
+
+                for (int it = 0; it < result; it++) {
+                    if (i+it+1 < factors.length) {
+                        factors[i+it+1] += factors[i];
+                    }
+                }
             }
         }
 
-        return points;
+        return Arrays.stream(factors).reduce(Integer::sum).orElse(0);
     }
 }
