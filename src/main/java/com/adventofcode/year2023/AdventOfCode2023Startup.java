@@ -1,8 +1,6 @@
 package com.adventofcode.year2023;
 
-import com.adventofcode.year2023.days.Day01;
-import com.adventofcode.year2023.days.Day02;
-import com.adventofcode.year2023.days.Day03;
+import com.adventofcode.year2023.days.*;
 
 public class AdventOfCode2023Startup {
 
@@ -19,5 +17,9 @@ public class AdventOfCode2023Startup {
         // Day 2
         System.out.println("2023 Day 3 - 1 : " + Day03.answer1());
         System.out.println("2023 Day 3 - 2 : " + Day03.answer2());
+
+        // Day 2
+        System.out.println("2023 Day 4 - 1 : " + Day04.answer1());
+        System.out.println("2023 Day 4 - 2 : " + Day04.answer2());
     }
 }

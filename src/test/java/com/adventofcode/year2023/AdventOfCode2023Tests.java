@@ -6,14 +6,17 @@ public class AdventOfCode2023Tests {
 
     public static void main(String[] args) {
 
-        System.out.println("================");
-        Day01Test.test();
+//        System.out.println("================");
+//        Day01Test.test();
+
+//        System.out.println("================");
+//        Day02Test.test();
+
+//        System.out.println("================");
+//        Day03Test.test();
 
         System.out.println("================");
-        Day02Test.test();
-
-        System.out.println("================");
-        Day03Test.test();
+        Day04Test.test();
     }
 
 }
