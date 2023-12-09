@@ -15,8 +15,20 @@ public class AdventOfCode2023Tests {
 //        System.out.println("================");
 //        Day03Test.test();
 
+//        System.out.println("================");
+//        Day04Test.test();
+
+//        System.out.println("================");
+//        Day05Test.test();
+
+//        System.out.println("================");
+//        Day06Test.test();
+
         System.out.println("================");
-        Day04Test.test();
+        Day07Test.test();
+
+//        System.out.println("================");
+//        Day08Test.test();
     }
 
 }
