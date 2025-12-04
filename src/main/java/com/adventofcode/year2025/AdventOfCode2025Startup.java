@@ -13,7 +13,7 @@ public class AdventOfCode2025Startup {
 
         System.out.println("Starting AdventOfCode2025");
 
-        final List<? extends AbstractDay> allDaysClasses = AdventOfCodeUtils.getAllDayClasses(AdventOfCode2025Startup.class.getPackageName()+".days");
+        final List<? extends AbstractDay> allDaysClasses = AdventOfCodeUtils.getAllDayClasses(AdventOfCode2025Startup.class.getPackageName() + ".days");
 
         for (AbstractDay dayClass : allDaysClasses) {
 

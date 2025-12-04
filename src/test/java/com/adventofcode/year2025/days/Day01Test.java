@@ -5,6 +5,8 @@ import com.adventofcode.model.AbstractDayTest;
 public class Day01Test extends AbstractDayTest<Day01> {
 
     public static final String CLASSNAME = Day01Test.class.getSimpleName();
+    private static final int EXPECTED_ANSWER_1 = 1052;
+    private static final int EXPECTED_ANSWER_2 = 0;
 
     public Day01Test() {
         super(new Day01());
@@ -25,9 +27,8 @@ public class Day01Test extends AbstractDayTest<Day01> {
     @Override
     protected boolean testAnswer1() {
         final Integer answer = day.answer1();
-        int expectedAnswer = 53921;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
+        if (answer != EXPECTED_ANSWER_1) {
+            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + EXPECTED_ANSWER_1);
             return false;
         }
         System.out.println(CLASSNAME + " answer 1 OK");
@@ -37,9 +38,8 @@ public class Day01Test extends AbstractDayTest<Day01> {
     @Override
     protected boolean testAnswer2() {
         final Integer answer = day.answer2();
-        int expectedAnswer = 54676;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
+        if (answer != EXPECTED_ANSWER_2) {
+            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + EXPECTED_ANSWER_2);
             return false;
         }
         System.out.println(CLASSNAME + " answer 2 OK");
