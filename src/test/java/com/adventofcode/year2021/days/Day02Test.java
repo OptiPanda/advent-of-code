@@ -1,8 +1,8 @@
 package com.adventofcode.year2021.days;
 
-import com.adventofcode.DayTest;
+import com.adventofcode.model.OldAbstractDayTest;
 
-public class Day02Test extends DayTest {
+public class Day02Test extends OldAbstractDayTest {
 
     public static final String CLASSNAME = Day02Test.class.getSimpleName();
 
