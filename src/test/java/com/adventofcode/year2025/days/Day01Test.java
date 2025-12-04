@@ -4,45 +4,21 @@ import com.adventofcode.model.AbstractDayTest;
 
 public class Day01Test extends AbstractDayTest<Day01> {
 
-    public static final String CLASSNAME = Day01Test.class.getSimpleName();
-    private static final int EXPECTED_ANSWER_1 = 1052;
-    private static final int EXPECTED_ANSWER_2 = 0;
-
     public Day01Test() {
         super(new Day01());
     }
 
-    @Override
-    public void test() {
-        System.out.println(CLASSNAME + " : Start tests");
-        System.out.println("---");
-
-        boolean isOk = testAnswer1() & testAnswer2();
-
-        System.out.println("---");
-
-        System.out.println(CLASSNAME + " : All test " + (isOk ? "OK" : "KO"));
+    public static void main(String[] args) {
+        new Day01Test().test();
     }
 
     @Override
-    protected boolean testAnswer1() {
-        final Integer answer = day.answer1();
-        if (answer != EXPECTED_ANSWER_1) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + EXPECTED_ANSWER_1);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 1 OK");
-        return true;
+    protected int getExpectedAnswer1() {
+        return 1052;
     }
 
     @Override
-    protected boolean testAnswer2() {
-        final Integer answer = day.answer2();
-        if (answer != EXPECTED_ANSWER_2) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + EXPECTED_ANSWER_2);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 2 OK");
-        return true;
+    protected int getExpectedAnswer2() {
+        return 0;
     }
 }

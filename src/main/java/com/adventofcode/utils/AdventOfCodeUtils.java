@@ -13,6 +13,14 @@ import java.util.Scanner;
 
 public class AdventOfCodeUtils {
 
+    public static void log(Object message) {
+        System.out.println(message);
+    }
+
+    public static void err(Object message) {
+        System.err.println(message);
+    }
+
     public static Scanner getScanner(String filePath) {
         try {
             File f = new File(filePath);
