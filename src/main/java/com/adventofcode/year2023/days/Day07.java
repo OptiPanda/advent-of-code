@@ -95,7 +95,7 @@ public class Day07 {
 
         for (int i = plays.size() - 1; i >= 0; i--) {
             final Play play = plays.get(i);
-            System.err.println("[" + play.scoreType + "]" + (i+1) + " - " + play.hand + " for " + play.bid + " ["+(play.bid * (i+1))+"]");
+//            System.err.println("[" + play.scoreType + "]" + (i+1) + " - " + play.hand + " for " + play.bid + " ["+(play.bid * (i+1))+"]");
             total += (play.bid * (i+1));
         }
 
@@ -200,7 +200,7 @@ public class Day07 {
 
         for (int i = plays.size() - 1; i >= 0; i--) {
             final Play play = plays.get(i);
-            System.err.println("[" + play.scoreType + "]" + (i+1) + " - " + play.hand + " for " + play.bid + " ["+(play.bid * (i+1))+"]");
+//            System.err.println("[" + play.scoreType + "]" + (i+1) + " - " + play.hand + " for " + play.bid + " ["+(play.bid * (i+1))+"]");
             total += (play.bid * (i+1));
         }
 

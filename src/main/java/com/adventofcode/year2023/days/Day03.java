@@ -133,13 +133,13 @@ public class Day03 {
                 final List<Integer> collect = Stream.of(previous, next, before, after).filter(Objects::nonNull).collect(Collectors.toList());
 
                 if (collect.size() == 2) {
-                    System.err.println(lines.get(i-1).substring(start, end));
-                    System.err.println(lines.get(i).substring(start, end));
-                    System.err.println(lines.get(i+1).substring(start, end));
-
-                    System.err.println(previous + " " + next + " " + before + " " + after);
-
-                    System.err.println();
+//                    System.err.println(lines.get(i-1).substring(start, end));
+//                    System.err.println(lines.get(i).substring(start, end));
+//                    System.err.println(lines.get(i+1).substring(start, end));
+//
+//                    System.err.println(previous + " " + next + " " + before + " " + after);
+//
+//                    System.err.println();
 
                     total += collect.stream().reduce(Integer::sum).orElse(0);
                 }

@@ -5,7 +5,7 @@ import com.adventofcode.model.AbstractDayTest;
 public class Day01Test extends AbstractDayTest<Day01> {
 
     public Day01Test() {
-        super(new Day01());
+        super(new Day01(), 2025);
     }
 
     public static void main(String[] args) {

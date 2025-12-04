@@ -15,4 +15,8 @@ public abstract class AbstractDay {
     protected static void log(Object message) {
         AdventOfCodeUtils.log(message);
     }
+
+    protected static void debug(Object message) {
+//        AdventOfCodeUtils.debug(message);
+    }
 }

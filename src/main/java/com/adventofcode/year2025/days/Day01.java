@@ -62,7 +62,7 @@ public class Day01 extends AbstractDay {
         int countZeros = 0;
         int current = 50;
 
-        log("("  + countZeros + ") " + current);
+        debug("("  + countZeros + ") " + current);
 
         while (sc.hasNextLine()) {
             String out = "[(" + current;
@@ -98,7 +98,7 @@ public class Day01 extends AbstractDay {
             }
 
             out += "\t\t===> " + current;
-            log("("  + countZeros + ") " + out);
+            debug("("  + countZeros + ") " + out);
         }
 
         return countZeros;
@@ -120,7 +120,7 @@ public class Day01 extends AbstractDay {
 
         Scanner sc = new Scanner(test);
         final int i = logicAnswer2(sc);
-        log(i);
+        debug(i);
     }
 
     private static int getStep(String line) {

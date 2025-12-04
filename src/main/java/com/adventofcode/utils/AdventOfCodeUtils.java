@@ -1,5 +1,6 @@
 package com.adventofcode.utils;
 
+import com.adventofcode.model.AbstractAdventOfCodeStartup;
 import com.adventofcode.model.AbstractDay;
 
 import java.io.File;
@@ -7,11 +8,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class AdventOfCodeUtils {
+
+    public static void debug(Object message) {
+        System.out.println(message);
+    }
 
     public static void log(Object message) {
         System.out.println(message);
@@ -31,6 +35,20 @@ public class AdventOfCodeUtils {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static List<? extends AbstractAdventOfCodeStartup> getAllStartupClasses(String packageName) throws Exception {
+        List<Class<?>> classes = getClasses(packageName);
+
+        return classes.stream()
+                .filter(cls -> AbstractAdventOfCodeStartup.class.isAssignableFrom(cls) && cls != AbstractAdventOfCodeStartup.class)
+                .map(cls -> {
+                    try {
+                        return (AbstractAdventOfCodeStartup) cls.getDeclaredConstructor().newInstance();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }).toList();
     }
 
     public static List<? extends AbstractDay> getAllDayClasses(String packageName) throws Exception {

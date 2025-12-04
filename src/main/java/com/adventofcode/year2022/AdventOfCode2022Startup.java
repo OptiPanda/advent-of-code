@@ -1,10 +1,19 @@
 package com.adventofcode.year2022;
 
+import com.adventofcode.model.AbstractAdventOfCodeStartup;
 import com.adventofcode.year2022.days.*;
 
-public class AdventOfCode2022Startup {
+import static com.adventofcode.utils.AdventOfCodeUtils.log;
+
+public class AdventOfCode2022Startup extends AbstractAdventOfCodeStartup {
+
+    @Override
+    public void main() throws Exception {
+        AdventOfCode2022Startup.main(null);
+    }
 
     public static void main(String[] args) {
+        log("Starting AdventOfCode2022");
 
         System.out.println("2022 Day 1 - 1 : " + Day01.answer1());
         System.out.println("2022 Day 1 - 2 : " + Day01.answer2());
@@ -32,5 +41,15 @@ public class AdventOfCode2022Startup {
 
         System.out.println("2022 Day 9 - 1 : " + Day09.answer1());
         System.out.println("2022 Day 9 - 2 : " + Day09.answer2());
+    }
+
+    @Override
+    protected int year() {
+        return 2022;
+    }
+
+    @Override
+    protected String packageName() {
+        return AdventOfCode2022Startup.class.getPackageName();
     }
 }
