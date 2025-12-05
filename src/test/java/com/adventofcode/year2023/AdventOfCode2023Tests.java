@@ -1,34 +1,12 @@
 package com.adventofcode.year2023;
 
-import com.adventofcode.year2023.days.*;
+import com.adventofcode.model.AbstractAdventOfCodeTests;
+import org.jetbrains.annotations.TestOnly;
 
-public class AdventOfCode2023Tests {
+public class AdventOfCode2023Tests extends AbstractAdventOfCodeTests {
 
-    public static void main(String[] args) {
-
-        System.out.println("================");
-        Day01Test.test();
-
-        System.out.println("================");
-        Day02Test.test();
-
-        System.out.println("================");
-        Day03Test.test();
-
-        System.out.println("================");
-        Day04Test.test();
-
-        System.out.println("================");
-        Day05Test.test();
-
-        System.out.println("================");
-        Day06Test.test();
-
-        System.out.println("================");
-        Day07Test.test();
-
-        System.out.println("================");
-        Day08Test.test();
+    @TestOnly
+    public static void main(String[] args) throws Exception {
+        new AdventOfCode2023Tests().start();
     }
-
 }

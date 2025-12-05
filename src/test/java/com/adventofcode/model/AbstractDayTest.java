@@ -2,31 +2,39 @@ package com.adventofcode.model;
 
 import org.jetbrains.annotations.NotNull;
 
-public abstract class AbstractDayTest<T extends AbstractDay> {
+import static com.adventofcode.utils.AdventOfCodeUtils.errln;
+import static com.adventofcode.utils.AdventOfCodeUtils.println;
+
+public abstract class AbstractDayTest<T extends AbstractDay<U>, U> {
 
     protected T day;
     protected int year;
     protected String className;
 
-    public AbstractDayTest(T day, int year) {
+    public AbstractDayTest(T day) {
         this.day = day;
-        this.year = year;
-        this.className = day.getClass().getSimpleName();
+        final var aClass = day.getClass();
+        this.className = aClass.getSimpleName();
+        year = Integer.parseInt(aClass.getPackageName().replaceAll(".*year(\\d{4}).*", "$1"));
     }
 
-    protected abstract int getExpectedAnswer1();
+    protected abstract U getExpectedAnswer1();
 
-    protected abstract int getExpectedAnswer2();
+    protected abstract U getExpectedAnswer2();
+
+    protected boolean otherTests() {
+        return true;
+    }
 
     public void test() {
-        System.out.println(classTestCode() + " : Start tests");
-        System.out.println("---");
+        println(classTestCode() + " : Start tests");
+        println("---");
 
-        boolean isOk = testAnswer1() & testAnswer2();
+        boolean isOk = otherTests() & testAnswer1() & testAnswer2();
 
-        System.out.println("---");
+        println("---");
 
-        System.out.println(classTestCode() + " : All test " + (isOk ? "OK" : "KO"));
+        println(classTestCode() + " : All test " + (isOk ? "OK" : "KO"));
     }
 
     @NotNull
@@ -35,22 +43,22 @@ public abstract class AbstractDayTest<T extends AbstractDay> {
     }
 
     protected boolean testAnswer1() {
-        final Integer answer = day.answer1();
-        if (answer != getExpectedAnswer1()) {
-            System.err.println(classTestCode() + " answer 1 KO | given " + answer + " expected " + getExpectedAnswer1());
+        final U answer = day.answer1();
+        if (!answer.equals(getExpectedAnswer1())) {
+            errln(classTestCode() + " answer 1 KO | given " + answer + " expected " + getExpectedAnswer1());
             return false;
         }
-        System.out.println(classTestCode() + " answer 1 OK");
+        println(classTestCode() + " answer 1 OK");
         return true;
     }
 
     protected boolean testAnswer2() {
-        final Integer answer = day.answer2();
-        if (answer != getExpectedAnswer2()) {
-            System.err.println(classTestCode() + " answer 2 KO | given " + answer + " expected " + getExpectedAnswer2());
+        final U answer = day.answer2();
+        if (!answer.equals(getExpectedAnswer2())) {
+            errln(classTestCode() + " answer 2 KO | given " + answer + " expected " + getExpectedAnswer2());
             return false;
         }
-        System.out.println(classTestCode() + " answer 2 OK");
+        println(classTestCode() + " answer 2 OK");
         return true;
     }
 }

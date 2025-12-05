@@ -1,5 +1,6 @@
 package com.adventofcode.year2022.days;
 
+import com.adventofcode.model.AbstractDay;
 import com.adventofcode.utils.AdventOfCodeUtils;
 
 import java.lang.invoke.MethodHandles;
@@ -7,11 +8,14 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Day09 {
+import static com.adventofcode.utils.AdventOfCodeUtils.println;
+
+public class Day09 extends AbstractDay<Integer> {
 
     private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
-    public static Integer answer1() {
+    @Override
+    public Integer answer1() {
 
         final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
@@ -78,23 +82,24 @@ public class Day09 {
     }
 
     protected static void print(int[] head, int[] tail) {
-        System.out.println("H[" + head[0] + "," + head[1] + "] -> T[" + tail[0] + "," + tail[1] + "]");
+        println("H[" + head[0] + "," + head[1] + "] -> T[" + tail[0] + "," + tail[1] + "]");
         for (int i = 5; i > -5; i--) {
             for (int j = -5; j < 5; j++) {
                 if (head[0] % 5 == i && head[1] % 5 == j) {
-                    System.out.print("H");
+                    AdventOfCodeUtils.print("H");
                 } else if (tail[0] % 5 == i && tail[1] % 5 == j) {
-                    System.out.print("T");
+                    AdventOfCodeUtils.print("T");
                 } else {
-                    System.out.print(".");
+                    AdventOfCodeUtils.print(".");
                 }
             }
-            System.out.println();
+            println("");
         }
-        System.out.println();
+        println("");
     }
 
-    public static Integer answer2() {
+    @Override
+    public Integer answer2() {
 
         final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 

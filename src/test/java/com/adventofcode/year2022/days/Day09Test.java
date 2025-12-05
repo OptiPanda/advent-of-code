@@ -1,48 +1,36 @@
 package com.adventofcode.year2022.days;
 
-import com.adventofcode.model.OldAbstractDayTest;
+import com.adventofcode.model.AbstractDayTest;
 
-public class Day09Test extends OldAbstractDayTest {
+import static com.adventofcode.utils.AdventOfCodeUtils.errln;
+import static com.adventofcode.utils.AdventOfCodeUtils.println;
 
-    public static final String CLASSNAME = Day09Test.class.getSimpleName();
-
-    public static void test() {
-        System.out.println(CLASSNAME + " : Start tests");
-        System.out.println("---");
-
-        boolean isOk = testTailFollowHead()
-                && testAnswer1()
-                && testAnswer2()
-                ;
-
-        System.out.println("---");
-
-        System.out.println(CLASSNAME + " : All test " + (isOk ? "OK" : "KO"));
+public class Day09Test extends AbstractDayTest<Day09, Integer> {
+    
+    public Day09Test() {
+        super(new Day09());
     }
 
-    private static boolean testAnswer1() {
-        final Integer answer = Day09.answer1();
-        int expectedAnswer = 6256;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 1 OK");
-        return true;
+    public static void main(String[] args) {
+        new Day09Test().test();
     }
 
-    private static boolean testAnswer2() {
-        final Integer answer = Day09.answer2();
-        int expectedAnswer = 0;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 2 OK");
-        return true;
+    @Override
+    protected Integer getExpectedAnswer1() {
+        return 6256;
     }
 
-    private static boolean testTailFollowHead() {
+    @Override
+    protected Integer getExpectedAnswer2() {
+        return 0;
+    }
+
+    @Override
+    protected boolean otherTests() {
+        return testTailFollowHead();
+    }
+
+    private boolean testTailFollowHead() {
         return testUp()
             && testRight()
             && testLeft()
@@ -64,7 +52,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    ##T##
      * ##T##    #####
      */
-    private static boolean testUp() {
+    private boolean testUp() {
         int[] head = {0, 0};
         int[] tail = {-2, 0};
 
@@ -72,10 +60,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testUp OK");
+        println(className + " testUp OK");
         return true;
     }
 
@@ -86,7 +74,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testDown() {
+    private boolean testDown() {
         int[] head = {0, 0};
         int[] tail = {2, 0};
 
@@ -94,10 +82,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testDown OK");
+        println(className + " testDown OK");
         return true;
     }
 
@@ -108,7 +96,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testLeft() {
+    private boolean testLeft() {
         int[] head = {0, 0};
         int[] tail = {0, 2};
 
@@ -116,10 +104,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {0, 1};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testLeft KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testLeft KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testLeft OK");
+        println(className + " testLeft OK");
         return true;
     }
 
@@ -130,7 +118,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testRight() {
+    private boolean testRight() {
         int[] head = {0, 0};
         int[] tail = {0, -2};
 
@@ -138,10 +126,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {0, -1};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testRight KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testRight KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testRight OK");
+        println(className + " testRight OK");
         return true;
     }
 
@@ -152,7 +140,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testLeftDown() {
+    private boolean testLeftDown() {
         int[] head = {0, 0};
         int[] tail = {2, 1};
 
@@ -160,10 +148,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testLeftDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testLeftDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testLeftDown OK");
+        println(className + " testLeftDown OK");
         return true;
     }
 
@@ -174,7 +162,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testRightDown() {
+    private boolean testRightDown() {
         int[] head = {0, 0};
         int[] tail = {2, -1};
 
@@ -182,10 +170,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testRightDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testRightDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testRightDown OK");
+        println(className + " testRightDown OK");
         return true;
     }
 
@@ -196,7 +184,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    ##T##
      * ###T#    #####
      */
-    private static boolean testLeftUp() {
+    private boolean testLeftUp() {
         int[] head = {0, 0};
         int[] tail = {-2, 1};
 
@@ -204,10 +192,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testLeftUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testLeftUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testLeftUp OK");
+        println(className + " testLeftUp OK");
         return true;
     }
 
@@ -218,7 +206,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    ##T##
      * #T###    #####
      */
-    private static boolean testRightUp() {
+    private boolean testRightUp() {
         int[] head = {0, 0};
         int[] tail = {-2, -1};
 
@@ -226,10 +214,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testRightUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testRightUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testRightUp OK");
+        println(className + " testRightUp OK");
         return true;
     }
 
@@ -240,7 +228,7 @@ public class Day09Test extends OldAbstractDayTest {
      * T####    #####
      * #####    #####
      */
-    private static boolean testRightUp2() {
+    private boolean testRightUp2() {
         int[] head = {0, 0};
         int[] tail = {-2, -1};
 
@@ -248,10 +236,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testRightUp3 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testRightUp3 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testRightUp3 OK");
+        println(className + " testRightUp3 OK");
         return true;
     }
 
@@ -262,7 +250,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testNoMove() {
+    private boolean testNoMove() {
         int[] head = {0, 0};
         int[] tail = {0, 0};
 
@@ -270,10 +258,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {0, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testNoMove KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testNoMove KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testNoMove OK");
+        println(className + " testNoMove OK");
         return true;
     }
 
@@ -284,7 +272,7 @@ public class Day09Test extends OldAbstractDayTest {
      * #####    #####
      * #####    #####
      */
-    private static boolean testNoMove2() {
+    private boolean testNoMove2() {
         int[] head = {0, 0};
         int[] tail = {1, 0};
 
@@ -292,10 +280,10 @@ public class Day09Test extends OldAbstractDayTest {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            System.err.println(CLASSNAME + " testNoMove2 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(className + " testNoMove2 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        System.out.println(CLASSNAME + " testNoMove2 OK");
+        println(className + " testNoMove2 OK");
         return true;
     }
 }

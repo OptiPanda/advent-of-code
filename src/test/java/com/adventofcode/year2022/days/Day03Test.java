@@ -1,45 +1,36 @@
 package com.adventofcode.year2022.days;
 
-import com.adventofcode.model.OldAbstractDayTest;
+import com.adventofcode.model.AbstractDayTest;
 
-public class Day03Test extends OldAbstractDayTest {
+import static com.adventofcode.utils.AdventOfCodeUtils.errln;
+import static com.adventofcode.utils.AdventOfCodeUtils.println;
 
-    public static final String CLASSNAME = Day03Test.class.getSimpleName();
+public class Day03Test extends AbstractDayTest<Day03, Integer> {
 
-    public static void test() {
-        System.out.println(CLASSNAME + " : Start tests");
-        System.out.println("---");
-
-        boolean isOk = testCalcCharScore() & testAnswer1() & testAnswer2();
-
-        System.out.println("---");
-
-        System.out.println(CLASSNAME + " : All test " + (isOk ? "OK" : "KO"));
+    public Day03Test() {
+        super(new Day03());
     }
 
-    private static boolean testAnswer1() {
-        final Integer answer = Day03.answer1();
-        int expectedAnswer = 8153;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 1 OK");
-        return true;
+    public static void main(String[] args) {
+        new Day03Test().test();
     }
 
-    private static boolean testAnswer2() {
-        final Integer answer = Day03.answer2();
-        int expectedAnswer = 2342;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 2 OK");
-        return true;
+    @Override
+    protected Integer getExpectedAnswer1() {
+        return 8153;
     }
 
-    private static boolean testCalcCharScore() {
+    @Override
+    protected Integer getExpectedAnswer2() {
+        return 2342;
+    }
+
+    @Override
+    protected boolean otherTests() {
+        return testCalcCharScore();
+    }
+
+    private boolean testCalcCharScore() {
         boolean isOk = true;
         char letter = 'a';
         for (int i = 1; i < 27; i++, letter++) {
@@ -47,7 +38,7 @@ public class Day03Test extends OldAbstractDayTest {
             isOk &= answer == i;
 
             if (answer != i) {
-                System.err.println(CLASSNAME + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
+                errln(className + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
             }
         }
 
@@ -57,11 +48,11 @@ public class Day03Test extends OldAbstractDayTest {
             isOk &= answer == i;
 
             if (answer != i) {
-                System.err.println(CLASSNAME + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
+                errln(className + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
             }
         }
 
-        System.out.println(CLASSNAME + " CalcCharScore OK");
+        println(className + " CalcCharScore OK");
 
         return isOk;
     }

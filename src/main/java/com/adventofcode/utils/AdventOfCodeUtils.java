@@ -8,20 +8,33 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.net.URL;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class AdventOfCodeUtils {
+
+    private AdventOfCodeUtils() {
+        //Util class
+    }
 
     public static void debug(Object message) {
         System.out.println(message);
     }
 
-    public static void log(Object message) {
+    public static void print(Object message) {
+        System.out.print(message);
+    }
+
+    public static void println(Object message) {
         System.out.println(message);
     }
 
     public static void err(Object message) {
+        System.err.print(message);
+    }
+
+    public static void errln(Object message) {
         System.err.println(message);
     }
 

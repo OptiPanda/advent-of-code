@@ -1,41 +1,23 @@
 package com.adventofcode.year2023.days;
 
-import com.adventofcode.model.OldAbstractDayTest;
+import com.adventofcode.model.AbstractDayTest;
 
-public class Day08Test extends OldAbstractDayTest {
-
-    public static final String CLASSNAME = Day08Test.class.getSimpleName();
-
-    public static void test() {
-        System.out.println(CLASSNAME + " : Start tests");
-        System.out.println("---");
-
-        boolean isOk = testAnswer1() & testAnswer2();
-
-        System.out.println("---");
-
-        System.out.println(CLASSNAME + " : All test " + (isOk ? "OK" : "KO"));
+public class Day08Test extends AbstractDayTest<Day08, Long> {
+    public Day08Test() {
+        super(new Day08());
     }
 
-    private static boolean testAnswer1() {
-        final Integer answer = Day08.answer1();
-        int expectedAnswer = 20221;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 1 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 1 OK");
-        return true;
+    public static void main(String[] args) {
+        new Day08Test().test();
     }
 
-    private static boolean testAnswer2() {
-        final Long answer = Day08.answer2();
-        long expectedAnswer = 14616363770447L;
-        if (answer != expectedAnswer) {
-            System.err.println(CLASSNAME + " answer 2 KO | given " + answer + " expected " + expectedAnswer);
-            return false;
-        }
-        System.out.println(CLASSNAME + " answer 2 OK");
-        return true;
+    @Override
+    protected Long getExpectedAnswer1() {
+        return 20221L;
+    }
+
+    @Override
+    protected Long getExpectedAnswer2() {
+        return 14616363770447L;
     }
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Day01 extends AbstractDay {
+public class Day01 extends AbstractDay<Integer> {
 
     private static final String FILE_PATH = "src/main/resources/year2025/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
@@ -17,11 +17,6 @@ public class Day01 extends AbstractDay {
     private static final String LEFT = "L";
     private static final String RIGHT = "R";
     private static final int MAX = 99;
-
-    @Override
-    public int day() {
-        return 1;
-    }
 
     @Override
     public Integer answer1() {
@@ -58,7 +53,7 @@ public class Day01 extends AbstractDay {
         return logicAnswer2(sc);
     }
 
-    private static int logicAnswer2(Scanner sc) {
+    private static Integer logicAnswer2(Scanner sc) {
         int countZeros = 0;
         int current = 50;
 
@@ -74,9 +69,11 @@ public class Day01 extends AbstractDay {
 
             out += " = " + current + "]";
 
-            if (current == 0) {
-                countZeros++;
-                out += "(+1)";
+            if (current % (MAX+1) == 0) {
+                final int zeros = Math.abs(current / (MAX + 1));
+                countZeros+= zeros;
+                current = 0;
+                out += "(+"+zeros+")";
             }
 
             while (current < 0) {
@@ -119,8 +116,7 @@ public class Day01 extends AbstractDay {
         """;
 
         Scanner sc = new Scanner(test);
-        final int i = logicAnswer2(sc);
-        debug(i);
+        debug(logicAnswer2(sc));
     }
 
     private static int getStep(String line) {

@@ -1,37 +1,11 @@
 package com.adventofcode.year2022;
 
-import com.adventofcode.year2022.days.*;
+import com.adventofcode.model.AbstractAdventOfCodeTests;
+import com.adventofcode.year2021.AdventOfCode2021Tests;
 
-public class AdventOfCode2022Tests {
+public class AdventOfCode2022Tests extends AbstractAdventOfCodeTests {
 
-    public static void main(String[] args) {
-
-        System.out.println("================");
-        Day01Test.test();
-
-        System.out.println("\n================");
-        Day02Test.test();
-
-        System.out.println("\n================");
-        Day03Test.test();
-
-        System.out.println("\n================");
-        Day04Test.test();
-
-        System.out.println("\n================");
-        Day05Test.test();
-
-        System.out.println("\n================");
-        Day06Test.test();
-
-        System.out.println("\n================");
-        Day07Test.test();
-
-        System.out.println("\n================");
-        Day08Test.test();
-
-        System.out.println("\n================");
-        Day09Test.test();
+    public static void main(String[] args) throws Exception {
+        new AdventOfCode2022Tests().start();
     }
-
 }

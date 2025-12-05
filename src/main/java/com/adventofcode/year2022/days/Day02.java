@@ -1,11 +1,12 @@
 package com.adventofcode.year2022.days;
 
+import com.adventofcode.model.AbstractDay;
 import com.adventofcode.utils.AdventOfCodeUtils;
 
 import java.lang.invoke.MethodHandles;
 import java.util.Scanner;
 
-public class Day02 {
+public class Day02 extends AbstractDay<Integer> {
 
     private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
@@ -21,7 +22,8 @@ public class Day02 {
     private static final int SCORE_DRAW = 3;
     private static final int SCORE_WIN = 6;
 
-    public static Integer answer1() {
+    @Override
+    public Integer answer1() {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
@@ -46,7 +48,8 @@ public class Day02 {
         return gameScore;
     }
 
-    public static Integer answer2() {
+    @Override
+    public Integer answer2() {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 

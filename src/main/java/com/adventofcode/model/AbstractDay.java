@@ -2,18 +2,23 @@ package com.adventofcode.model;
 
 import com.adventofcode.utils.AdventOfCodeUtils;
 
-public abstract class AbstractDay {
+public abstract class AbstractDay<T> {
 
-    public abstract int day();
-    public abstract Integer answer1();
-    public abstract Integer answer2();
+    protected AbstractDay() {}
+
+    public abstract T answer1();
+    public abstract T answer2();
+
+    public int day() {
+        return Integer.parseInt(this.getClass().getSimpleName().replace("[a-zA-Z]", ""));
+    }
 
     protected static void err(Object message) {
-        AdventOfCodeUtils.err(message);
+        AdventOfCodeUtils.errln(message);
     }
 
     protected static void log(Object message) {
-        AdventOfCodeUtils.log(message);
+        AdventOfCodeUtils.println(message);
     }
 
     protected static void debug(Object message) {

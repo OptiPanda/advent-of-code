@@ -1,5 +1,6 @@
 package com.adventofcode.year2023.days;
 
+import com.adventofcode.model.AbstractDay;
 import com.adventofcode.utils.AdventOfCodeUtils;
 
 import java.lang.invoke.MethodHandles;
@@ -8,13 +9,14 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.function.Predicate;
 
-public class Day08 {
+public class Day08 extends AbstractDay<Long> {
 
     private static final String FILE_PATH = "src/main/resources/year2023/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static final Map<String, String[]> MAP = new HashMap<>();
 
-    public static Integer answer1() {
+    @Override
+    public Long answer1() {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 
@@ -28,10 +30,11 @@ public class Day08 {
             MAP.put(line[0], line[1].replace("(", "").replace(")", "").replace(" ", "").split(","));
         }
 
-        return (int) getNumSteps("AAA", instructions, s -> !s.equals("ZZZ"));
+        return getNumSteps("AAA", instructions, s -> !s.equals("ZZZ"));
     }
 
-    public static Long answer2() {
+    @Override
+    public Long answer2() {
 
         Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
 

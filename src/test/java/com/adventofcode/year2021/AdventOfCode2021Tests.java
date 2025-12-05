@@ -1,18 +1,10 @@
 package com.adventofcode.year2021;
 
-import com.adventofcode.year2021.days.*;
+import com.adventofcode.model.AbstractAdventOfCodeTests;
 
-public class AdventOfCode2021Tests {
+public class AdventOfCode2021Tests extends AbstractAdventOfCodeTests {
 
-    public static void main(String[] args) {
-        System.out.println("================");
-        Day01Test.test();
-
-        System.out.println("================");
-        Day02Test.test();
-
-        System.out.println("================");
-        Day03Test.test();
+    public static void main(String[] args) throws Exception {
+        new AdventOfCode2021Tests().start();
     }
-
 }
