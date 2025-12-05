@@ -60,10 +60,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testUp OK");
+        println(classTestCode() + " testUp OK");
         return true;
     }
 
@@ -82,10 +82,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testDown OK");
+        println(classTestCode() + " testDown OK");
         return true;
     }
 
@@ -104,10 +104,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {0, 1};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testLeft KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testLeft KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testLeft OK");
+        println(classTestCode() + " testLeft OK");
         return true;
     }
 
@@ -126,10 +126,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {0, -1};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testRight KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testRight KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testRight OK");
+        println(classTestCode() + " testRight OK");
         return true;
     }
 
@@ -148,10 +148,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testLeftDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testLeftDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testLeftDown OK");
+        println(classTestCode() + " testLeftDown OK");
         return true;
     }
 
@@ -170,10 +170,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testRightDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testRightDown KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testRightDown OK");
+        println(classTestCode() + " testRightDown OK");
         return true;
     }
 
@@ -192,10 +192,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testLeftUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testLeftUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testLeftUp OK");
+        println(classTestCode() + " testLeftUp OK");
         return true;
     }
 
@@ -214,10 +214,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testRightUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testRightUp KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testRightUp OK");
+        println(classTestCode() + " testRightUp OK");
         return true;
     }
 
@@ -236,10 +236,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {-1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testRightUp3 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testRightUp3 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testRightUp3 OK");
+        println(classTestCode() + " testRightUp3 OK");
         return true;
     }
 
@@ -258,10 +258,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {0, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testNoMove KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testNoMove KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testNoMove OK");
+        println(classTestCode() + " testNoMove OK");
         return true;
     }
 
@@ -280,10 +280,10 @@ public class Day09Test extends AbstractDayTest<Day09, Integer> {
 
         int[] expectedAnswer = {1, 0};
         if (tail[0] != expectedAnswer[0] || tail[1] != expectedAnswer[1]) {
-            errln(className + " testNoMove2 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
+            errln(classTestCode() + " testNoMove2 KO | given [" + tail[0] + "," + tail[1] + "] expected [" + expectedAnswer[0] + "," + expectedAnswer[1] + "]");
             return false;
         }
-        println(className + " testNoMove2 OK");
+        println(classTestCode() + " testNoMove2 OK");
         return true;
     }
 }

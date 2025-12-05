@@ -33,18 +33,18 @@ public class Day05Test extends AbstractDayTest<Day05, String> {
     private boolean testGetOrder() {
         final Day05.Order answer = Day05.getOrder("move 4 from 5 to 6");
         if (answer.move != 4) {
-            errln(className + " testGetOrder KO | given 4 expected 4 got" + answer.move);
+            errln(classTestCode() + " testGetOrder KO | given 4 expected 4 got" + answer.move);
             return false;
         }
         if (answer.from != 5) {
-            errln(className + " testGetOrder KO | given 5 expected 5 got" + answer.from);
+            errln(classTestCode() + " testGetOrder KO | given 5 expected 5 got" + answer.from);
             return false;
         }
         if (answer.to != 6) {
-            errln(className + " testGetOrder KO | given 6 expected 6 got" + answer.to);
+            errln(classTestCode() + " testGetOrder KO | given 6 expected 6 got" + answer.to);
             return false;
         }
-        println(className + " testGetOrder OK");
+        println(classTestCode() + " testGetOrder OK");
         return true;
     }
 }

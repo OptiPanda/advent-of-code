@@ -57,12 +57,12 @@ public class Day01 extends AbstractDay<Integer> {
         int countZeros = 0;
         int current = 50;
 
-        debug("(" + countZeros + ") " + current);
+//        debug("(" + countZeros + ") " + current);
 
         while (sc.hasNextLine()) {
-            String out = "[(" + current;
+//            String out = "[(" + current;
             int step = getStep(sc.nextLine());
-            out += " + " + step + ")]";
+//            out += " + " + step + ")]";
 
             if (step % (MAX + 1) == 0) {
                 while (step % (MAX + 1) == 0 && step != 0) {
@@ -72,11 +72,11 @@ public class Day01 extends AbstractDay<Integer> {
                         step -= MAX + 1;
                     }
                     countZeros++;
-                    out += "(+1%)";
+//                    out += "(+1%)";
                 }
                 if (current !=  0) {
                     countZeros++;
-                    out += "(+1!0)";
+//                    out += "(+1!0)";
                 }
             }
 
@@ -84,13 +84,13 @@ public class Day01 extends AbstractDay<Integer> {
                 while (step > (MAX + 1)) {
                     step -= (MAX + 1);
                     countZeros++;
-                    out += "(+1>M)";
+//                    out += "(+1>M)";
                 }
             } else {
                 while (step < -(MAX + 1)) {
                     step += (MAX + 1);
                     countZeros++;
-                    out += "(+1<M)";
+//                    out += "(+1<M)";
                 }
             }
             boolean wasZero = current==0;
@@ -101,70 +101,23 @@ public class Day01 extends AbstractDay<Integer> {
             if (current > (MAX + 1)) {
                 current -= (MAX + 1);
                 countZeros++;
-                out += "(+1>)";
+//                out += "(+1>)";
             } else if (current <  0) {
                 current += (MAX + 1);
                 if (!wasZero) {
                     countZeros++;
-                    out += "(+1<)";
+//                    out += "(+1<)";
                 }
             } else if (!wasZero && current ==  0) {
                 countZeros++;
-                out += "(+1~)";
+//                out += "(+1~)";
             }
 
-//            current += step;
-//
-//            out += " = " + current + "]";
-//
-//            if (current % (MAX+1) == 0) {
-//                final int zeros = Math.abs(current / (MAX + 1));
-//                countZeros+= zeros + (current - step != 0 ? 1 : 0);
-//                current = 0;
-//                out += "(+"+zeros+")";
-//            }
-//
-//            while (current < 0) {
-//                current += (MAX+1);
-//                out += " -> " + current;
-//                if ((current - step) != 0) {
-//                    countZeros++;
-//                    out += "(+1)";
-//                }
-//            }
-//
-//            while (current > MAX) {
-//                current -= (MAX+1);
-//                out += " -> " + current;
-//                if ((current - step) != 0) {
-//                    countZeros++;
-//                    out += "(+1)";
-//                }
-//            }
-
-            out += "\t\t===> " + current;
-            debug("(" + countZeros + ") " + out);
+//            out += "\t\t===> " + current;
+//            debug("(" + countZeros + ") " + out);
         }
 
         return countZeros;
-    }
-
-    public static void main(String[] args) {
-        String test = """
-                L68
-                L30
-                R48
-                L5
-                R60
-                L55
-                L1
-                L99
-                R14
-                L82
-                """;
-
-        Scanner sc = new Scanner(test);
-        debug(new Day01().logicAnswer2(sc));
     }
 
     private static int getStep(String line) {

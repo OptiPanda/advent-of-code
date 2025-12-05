@@ -8,8 +8,8 @@ import static com.adventofcode.utils.AdventOfCodeUtils.println;
 public abstract class AbstractDayTest<T extends AbstractDay<U>, U> {
 
     protected T day;
-    protected int year;
-    protected String className;
+    private final int year;
+    private final String className;
 
     public AbstractDayTest(T day) {
         this.day = day;
@@ -38,7 +38,7 @@ public abstract class AbstractDayTest<T extends AbstractDay<U>, U> {
     }
 
     @NotNull
-    private String classTestCode() {
+    protected String classTestCode() {
         return "[" + year + "/" + className + "]";
     }
 

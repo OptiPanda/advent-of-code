@@ -4,8 +4,7 @@ import com.adventofcode.model.AbstractDayTest;
 
 import java.util.Scanner;
 
-import static com.adventofcode.utils.AdventOfCodeUtils.debug;
-import static com.adventofcode.utils.AdventOfCodeUtils.errln;
+import static com.adventofcode.utils.AdventOfCodeUtils.*;
 
 public class Day01Test extends AbstractDayTest<Day01, Integer> {
 
@@ -40,15 +39,15 @@ public class Day01Test extends AbstractDayTest<Day01, Integer> {
             L301
             R100    
         """;
-
-        final Integer answer = day.logicAnswer2(new Scanner(input));
-        debug(answer);
-
         int expected = 7;
 
+        final Integer answer = day.logicAnswer2(new Scanner(input));
+
         if (answer != expected) {
-            errln(className + " logicAnswer2 KO | expected " + expected + " got " + answer);
+            errln(classTestCode() + " logicAnswer2 KO | expected " + expected + " got " + answer);
+            return false;
         }
-        return answer == expected;
+        println(classTestCode() + " logicAnswer2 OK");
+        return true;
     }
 }

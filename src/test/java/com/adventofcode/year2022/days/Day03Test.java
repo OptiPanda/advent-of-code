@@ -38,7 +38,7 @@ public class Day03Test extends AbstractDayTest<Day03, Integer> {
             isOk &= answer == i;
 
             if (answer != i) {
-                errln(className + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
+                errln(classTestCode() + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
             }
         }
 
@@ -48,11 +48,11 @@ public class Day03Test extends AbstractDayTest<Day03, Integer> {
             isOk &= answer == i;
 
             if (answer != i) {
-                errln(className + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
+                errln(classTestCode() + " CalcCharScore KO | given '" + letter + "' expected " + i + " got " + answer);
             }
         }
 
-        println(className + " CalcCharScore OK");
+        println(classTestCode() + " CalcCharScore OK");
 
         return isOk;
     }

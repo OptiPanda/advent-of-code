@@ -52,10 +52,10 @@ public class Day08Test extends AbstractDayTest<Day08, Integer> {
 
     private boolean testGetDirectionValue(int answer, int expectedAnswer, String direction) {
         if (answer != expectedAnswer) {
-            errln(className + " testGetDirection " + direction + " KO | answer " + answer + " expected " + expectedAnswer);
+            errln(classTestCode() + " testGetDirection " + direction + " KO | answer " + answer + " expected " + expectedAnswer);
             return false;
         }
-        println(className + " testGetDirection " + direction + " OK");
+        println(classTestCode() + " testGetDirection " + direction + " OK");
         return true;
     }
 }
