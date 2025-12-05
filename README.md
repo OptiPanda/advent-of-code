@@ -29,4 +29,4 @@ My code to resolve the [Advent Of Code](https://adventofcode.com/)
 - Day 8 ⭐⭐
 
 # [2025](https://adventofcode.com/2025)
-- Day 1 ⭐
+- Day 1 ⭐⭐

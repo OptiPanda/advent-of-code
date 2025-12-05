@@ -22,6 +22,6 @@ public abstract class AbstractDay<T> {
     }
 
     protected static void debug(Object message) {
-//        AdventOfCodeUtils.debug(message);
+        AdventOfCodeUtils.debug(message);
     }
 }
