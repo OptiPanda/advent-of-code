@@ -3,21 +3,16 @@ package com.adventofcode.year2022.days;
 import com.adventofcode.model.AbstractDay;
 import com.adventofcode.utils.AdventOfCodeUtils;
 
-import java.lang.invoke.MethodHandles;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import static com.adventofcode.utils.AdventOfCodeUtils.println;
-
 public class Day09 extends AbstractDay<Integer> {
-
-    private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     @Override
     public Integer answer1() {
 
-        final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        final Scanner sc = getScanner();
 
         int[] head = {0, 0};
         int[] tail = {0, 0};
@@ -101,7 +96,7 @@ public class Day09 extends AbstractDay<Integer> {
     @Override
     public Integer answer2() {
 
-        final Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        final Scanner sc = getScanner();
 
         return 0;
     }

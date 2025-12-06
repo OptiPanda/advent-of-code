@@ -1,19 +1,15 @@
 package com.adventofcode.year2022.days;
 
 import com.adventofcode.model.AbstractDay;
-import com.adventofcode.utils.AdventOfCodeUtils;
 
-import java.lang.invoke.MethodHandles;
 import java.util.*;
 
 public class Day07 extends AbstractDay<Integer> {
 
-    private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
-
     @Override
     public Integer answer1() {
 
-        Directory currentDirectory = getRootDirectory(AdventOfCodeUtils.getScanner(FILE_PATH));
+        Directory currentDirectory = getRootDirectory(getScanner());
 
         return sumDirLte100000(currentDirectory);
     }
@@ -36,7 +32,7 @@ public class Day07 extends AbstractDay<Integer> {
     @Override
     public Integer answer2() {
 
-        Directory rootDirectory = getRootDirectory(AdventOfCodeUtils.getScanner(FILE_PATH));
+        Directory rootDirectory = getRootDirectory(getScanner());
 
         int spaceLeft = 70000000 - rootDirectory.getSize();
 

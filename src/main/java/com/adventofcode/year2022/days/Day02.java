@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 public class Day02 extends AbstractDay<Integer> {
 
-    private static final String FILE_PATH = "src/main/resources/year2022/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
-
     private static final String ROCK = "A";
     private static final String PAPER = "B";
     private static final String SCISSOR = "C";
@@ -25,7 +23,7 @@ public class Day02 extends AbstractDay<Integer> {
     @Override
     public Integer answer1() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         int gameScore = 0;
 
@@ -51,7 +49,7 @@ public class Day02 extends AbstractDay<Integer> {
     @Override
     public Integer answer2() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         int gameScore = 0;
 

@@ -2,12 +2,23 @@ package com.adventofcode.model;
 
 import com.adventofcode.utils.AdventOfCodeUtils;
 
+import java.util.Scanner;
+
 public abstract class AbstractDay<T> {
 
-    protected AbstractDay() {}
+    private final String filePath;
+
+    protected AbstractDay() {
+        int year = Integer.parseInt(this.getClass().getPackageName().replaceAll(".*year(\\d{4}).*", "$1"));
+        this.filePath = "src/main/resources/year"+year+"/input-" + this.getClass().getSimpleName().toLowerCase();
+    }
 
     public abstract T answer1();
     public abstract T answer2();
+
+    protected Scanner getScanner() {
+        return AdventOfCodeUtils.getScanner(this.filePath);
+    }
 
     public int day() {
         return Integer.parseInt(this.getClass().getSimpleName().replace("[a-zA-Z]", ""));

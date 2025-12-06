@@ -1,14 +1,10 @@
 package com.adventofcode.year2021.days;
 
 import com.adventofcode.model.AbstractDay;
-import com.adventofcode.utils.AdventOfCodeUtils;
 
-import java.lang.invoke.MethodHandles;
 import java.util.Scanner;
 
 public class Day02 extends AbstractDay<Integer> {
-
-    private static final String FILE_PATH = "src/main/resources/year2021/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static final String FORWARD = "forward";
     private static final String DOWN = "down";
@@ -17,7 +13,7 @@ public class Day02 extends AbstractDay<Integer> {
     @Override
     public Integer answer1() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         int x = 0; // horizontal
         int y = 0; // vertical
@@ -41,7 +37,7 @@ public class Day02 extends AbstractDay<Integer> {
     @Override
     public Integer answer2() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         int x = 0; // horizontal
         int y = 0; // vertical

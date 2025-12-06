@@ -1,9 +1,7 @@
 package com.adventofcode.year2023.days;
 
 import com.adventofcode.model.AbstractDay;
-import com.adventofcode.utils.AdventOfCodeUtils;
 
-import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -15,8 +13,6 @@ import java.util.stream.Stream;
 
 public class Day03 extends AbstractDay<Integer> {
 
-    private static final String FILE_PATH = "src/main/resources/year2023/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
-
     private static final Pattern PATTERN_DIGITS = Pattern.compile("\\d{1,3}");
     private static final Pattern PATTERN_NOT_DIGITS_NOT_DOT = Pattern.compile("[^\\d\\.]");
 
@@ -25,7 +21,7 @@ public class Day03 extends AbstractDay<Integer> {
     @Override
     public Integer answer1() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         List<String> lines = new ArrayList<>();
 
@@ -78,7 +74,7 @@ public class Day03 extends AbstractDay<Integer> {
     @Override
     public Integer answer2() {
 
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         List<String> lines = new ArrayList<>();
 

@@ -1,16 +1,12 @@
 package com.adventofcode.year2025.days;
 
 import com.adventofcode.model.AbstractDay;
-import com.adventofcode.utils.AdventOfCodeUtils;
 
-import java.lang.invoke.MethodHandles;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Day01 extends AbstractDay<Integer> {
-
-    private static final String FILE_PATH = "src/main/resources/year2025/input-" + MethodHandles.lookup().lookupClass().getSimpleName().toLowerCase();
 
     private static final String REGEX = "([LR])(\\d+)";
     private static final Pattern PATTERN = Pattern.compile(REGEX);
@@ -20,7 +16,7 @@ public class Day01 extends AbstractDay<Integer> {
 
     @Override
     public Integer answer1() {
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         int countZeros = 0;
         int current = 50;
@@ -48,7 +44,7 @@ public class Day01 extends AbstractDay<Integer> {
 
     @Override
     public Integer answer2() {
-        Scanner sc = AdventOfCodeUtils.getScanner(FILE_PATH);
+        Scanner sc = getScanner();
 
         return logicAnswer2(sc);
     }
