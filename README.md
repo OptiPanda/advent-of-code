@@ -5,7 +5,7 @@ My code to resolve the [Advent Of Code](https://adventofcode.com/)
 # [2025](https://adventofcode.com/2025)
 - Day 1 ⭐ ⭐
 - Day 2 ⭐ ⭐
-- Day 3 ⭐
+- Day 3 ⭐ ⭐
 
 ___
 # [2024](https://adventofcode.com/2024)

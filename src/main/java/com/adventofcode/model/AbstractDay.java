@@ -13,11 +13,11 @@ public abstract class AbstractDay<T> {
         return Integer.parseInt(this.getClass().getSimpleName().replace("[a-zA-Z]", ""));
     }
 
-    protected static void err(Object message) {
+    protected static void errln(Object message) {
         AdventOfCodeUtils.errln(message);
     }
 
-    protected static void log(Object message) {
+    protected static void println(Object message) {
         AdventOfCodeUtils.println(message);
     }
 
