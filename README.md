@@ -5,10 +5,11 @@ My code to resolve the [Advent Of Code](https://adventofcode.com/)
 # [2025](https://adventofcode.com/2025)
 - Day 1 ⭐ ⭐
 - Day 2 ⭐ ⭐
+- Day 3 ⭐
 
 ___
 # [2024](https://adventofcode.com/2024)
-_Not participated yey_
+_Not participated yet_
 
 ___
 # [2023](https://adventofcode.com/2023)
