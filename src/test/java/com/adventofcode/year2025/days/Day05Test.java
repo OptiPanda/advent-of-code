@@ -14,7 +14,7 @@ class Day05Test extends AbstractDayTest<Day05, Integer> {
 
     @Override
     protected Integer getExpectedAnswer1() {
-        return -1;
+        return 643;
     }
 
     @Override
