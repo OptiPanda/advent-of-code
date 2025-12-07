@@ -8,6 +8,7 @@ My code to resolve the [Advent Of Code](https://adventofcode.com/)
 - Day 03 ⭐ ⭐
 - Day 04 ⭐ ⭐
 - Day 05 ⭐
+- Day 06
 
 ___
 # [2024](https://adventofcode.com/2024)
