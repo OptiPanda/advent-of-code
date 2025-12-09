@@ -7,6 +7,10 @@ import static com.adventofcode.utils.AdventOfCodeUtils.println;
 
 public abstract class AbstractDayTest<T extends AbstractDay<U>, U> {
 
+    protected static final Long LONG_DEFAULT = -1L;
+    protected static final Integer INT_DEFAULT = -1;
+    protected static final String STRING_DEFAULT = "NULL";
+
     protected T day;
     private final int year;
     private final String className;

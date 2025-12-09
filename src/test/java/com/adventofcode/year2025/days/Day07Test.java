@@ -2,7 +2,7 @@ package com.adventofcode.year2025.days;
 
 import com.adventofcode.model.AbstractDayTest;
 
-class Day07Test extends AbstractDayTest<Day07, Integer> {
+class Day07Test extends AbstractDayTest<Day07, Long> {
 
     public Day07Test() {
         super(new Day07());
@@ -13,12 +13,12 @@ class Day07Test extends AbstractDayTest<Day07, Integer> {
     }
 
     @Override
-    protected Integer getExpectedAnswer1() {
-        return -1;
+    protected Long getExpectedAnswer1() {
+        return 1687L;
     }
 
     @Override
-    protected Integer getExpectedAnswer2() {
-        return -1;
+    protected Long getExpectedAnswer2() {
+        return LONG_DEFAULT;
     }
 }
