@@ -38,7 +38,11 @@ public abstract class AbstractDayTest<T extends AbstractDay<U>, U> {
 
         println("---");
 
-        println(classTestCode() + " : All test " + (isOk ? "OK" : "KO"));
+        if (isOk) {
+            println(classTestCode() + " : All test OK");
+        } else {
+            errln(classTestCode() + " : All test KO");
+        }
     }
 
     @NotNull
