@@ -10,6 +10,7 @@ My code to resolve the [Advent Of Code](https://adventofcode.com/)
 - Day 05 ⭐
 - Day 06 ⭐ ⭐
 - Day 07 ⭐
+- Day 08 
 
 ___
 # [2024](https://adventofcode.com/2024)

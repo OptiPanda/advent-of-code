@@ -50,15 +50,42 @@ public class Day07 extends AbstractDay<Long> {
 
     @Override
     public Long answer2() {
-        final Scanner sc = getScanner();
-        final Map<Integer, String> lines = new HashMap<>();
-        int i = 0;
-        while (sc.hasNextLine()) {
-            lines.put(i++, sc.nextLine());
-        }
+//        final Scanner sc = getScanner();
+//        final Map<Integer, String> lines = new HashMap<>();
+//        int i = 0;
+//        while (sc.hasNextLine()) {
+//            lines.put(i++, sc.nextLine());
+//        }
+//
+//        double count = 1;
+//        for (Map.Entry<Integer, String> entry : lines.entrySet()) {
+//            if (entry.getKey() == 0) {
+//                continue;
+//            }
+//
+//            println(count);
+//
+//            final String[] upperLineSplitted = lines.get(entry.getKey() - 1).split("");
+//            final String[] lineSplitted = entry.getValue().split("");
+//
+//            for (int idx = 0; idx < upperLineSplitted.length; idx++) {
+//                if ("S".equals(upperLineSplitted[idx])) {
+//                    lineSplitted[idx] = "|";
+//                } else if ("|".equals(upperLineSplitted[idx])) {
+//                    if ("^".equals(lineSplitted[idx])) {
+//                        count *= "|".equals(lineSplitted[idx - 1]) ? 1 : 2;
+//                        lineSplitted[idx - 1] = "|";
+//                        lineSplitted[idx + 1] = "|";
+//                    } else {
+//                        lineSplitted[idx] = "|";
+//                    }
+//                }
+//            }
+//
+//            final String join = String.join("", lineSplitted);
+//            lines.put(entry.getKey(), join);
+//        }
 
-//        return take(1, 0L, lines);
-        // TODO : Mathematical shit i don't know wich yet. recursive is too much
         return 0L;
     }
 
